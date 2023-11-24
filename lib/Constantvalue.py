@@ -4,6 +4,6 @@ def solve(word):
 
     return max(consonant_values, default=0)
 
-# Examples
+# Example tests
 print(solve("zodiacs"))  # Output: 26
 print(solve("strength"))  # Output: 57
