@@ -1,16 +1,9 @@
 def solve(word):
     vowels = "aeiou"
-    consonant_values = [ord(char) - ord('a') + 1 for char in word if char not in vowels]
-    
-    max_consonant_value = 0
-    current_consonant_value = 0
-    
-    for value in consonant_values:
-        current_consonant_value = max(0, current_consonant_value + value)
-        max_consonant_value = max(max_consonant_value, current_consonant_value)
+    consonant_values = [sum(ord(char) - ord('a') + 1 for char in substring) for substring in ''.join([' ' if char in vowels else char for char in word]).split()]
 
-    return max_consonant_value
+    return max(consonant_values, default=0)
 
-# Test cases
-print(solve("zodiacs"))  
-print(solve("strength"))  
+# Examples
+print(solve("zodiacs"))  # Output: 26
+print(solve("strength"))  # Output: 57
