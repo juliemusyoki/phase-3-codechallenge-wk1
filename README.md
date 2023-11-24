@@ -19,6 +19,7 @@ This project focuses on creating a function that processes a given lowercase str
 ## Setup/Installation Requirements
 - Clone the repository to any desired folder on your computer.
 - Open the cloned folder with vscode.
+- Change directory to the lib folder 
 - Run individual files in your terminal using the command python3 name_of_the_file.py, i.e., python3 Timeconverter.py.
 - You are good to go!
 ## Known Bugs
